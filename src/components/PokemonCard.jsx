@@ -2,7 +2,7 @@ function PokemonCard() {
     const pokemon = pokemonList[1]; //prend le premier pokemon de pokemonList//
      return (// ce que j'avai penser ( pokemon.imgSrc === null )? <p>???</p>:(        la realité en dessous ....
          <figure>
-            {pokemon.imgSrc != undefined ?(//je ne comprend pas bien cette ligne  if pokemon.imgSrc ??? if quoi? 
+            {pokemon.imgSrc != undefined ?(// on pourrais également écrire  a cette ligne {pokemon.imgSrc ?( qui revient a demander simplement si elle existe ou si elle est undefined  on verifie ce qui ne fontionne pas en premier
         <img
          src={pokemon.imgSrc}
          alt={pokemon.name}
