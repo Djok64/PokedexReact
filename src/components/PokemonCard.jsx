@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function PokemonCard({pokemon}) {
     console.log(pokemon);
     // const pokemon = props.pokemon//prend le premier pokemon de pokemonList//
@@ -17,6 +19,12 @@ function PokemonCard({pokemon}) {
     
 }
 
-
+PokemonCard.propTypes = {
+    pokemon: PropTypes.shape({
+        name: PropTypes.string.isRequiered,
+        imgSrc: PropTypes.string,
+    }).isRequired,
+     
+};
 
 export default PokemonCard;
