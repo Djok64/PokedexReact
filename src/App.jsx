@@ -1,14 +1,5 @@
 import PokemonCard from './components/PokemonCard'
 import "./App.css"
-function App() {
-  
-
-  return (
-    <>
-    <PokemonCard pokemon={pokemonList[0]}/>
-    </>
-  )
-}
 
 const pokemonList = [
   {
@@ -20,4 +11,17 @@ const pokemonList = [
       name: "mew",
   },
 ];
+
+
+function App() {
+  
+
+  return (
+    <>
+    <PokemonCard pokemon={pokemonList[0]}/>
+    </>
+  )
+}
+
+
 export default App

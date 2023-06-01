@@ -1,9 +1,9 @@
-function PokemonCard(props) {
-    console.log(props)
-    const pokemon = props.pokemon//prend le premier pokemon de pokemonList//
+function PokemonCard({pokemon}) {
+    console.log(pokemon);
+    // const pokemon = props.pokemon//prend le premier pokemon de pokemonList//
      return (// ce que j'avai penser ( pokemon.imgSrc === null )? <p>???</p>:(        la realité en dessous ....
          <figure>
-            {pokemon.imgSrc != undefined ?(// on pourrais également écrire  a cette ligne {pokemon.imgSrc ?( qui revient a demander simplement si elle existe ou si elle est undefined  on verifie ce qui ne fontionne pas en premier
+             {pokemon.imgSrc != undefined ?(// on pourrais également écrire  a cette ligne {pokemon.imgSrc ?( qui revient a demander simplement si elle existe ou si elle est undefined  on verifie ce qui ne fontionne pas en premier
         <img
          src={pokemon.imgSrc}
          alt={pokemon.name}
