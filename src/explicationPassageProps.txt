@@ -1,0 +1,35 @@
+
+Voici les modifications apportées pour partager les props et l'état entre le composant parent et le composant enfant :
+
+Dans le fichier App.jsx, nous avons :
+
+Ajout de l'import de useState depuis React :
+
+jsx
+
+import React, { useState } from 'react';
+Modification de la ligne où le composant Navbar est rendu :
+
+jsx
+
+<Navbar 
+  pokemonIndex={pokemonIndex} 
+  setPokemonIndex={setPokemonIndex}
+  pokemonList={pokemonList} 
+/>
+Explication : Nous passons les props pokemonIndex, setPokemonIndex et pokemonList au composant Navbar en tant qu'attributs.
+
+Dans le fichier Navbar.jsx, nous avons :
+
+Modification de la signature de la fonction Navbar pour recevoir les props en tant que paramètres :
+
+jsx
+
+const Navbar = ({ setPokemonIndex, pokemonIndex, pokemonList }) => {
+Utilisation des props setPokemonIndex, pokemonIndex et pokemonList dans les fonctions previousClick et nextClick.
+
+Explication : Nous utilisons les props reçues du composant parent pour mettre à jour l'état pokemonIndex lorsque les boutons "Précédent" et "Suivant" sont cliqués.
+
+Dans le fichier PokemonCard.jsx, nous n'avons pas besoin de modifications car il reçoit déjà les props pokemon du composant parent.
+
+J'espère que ces explications clarifient comment les props et l'état sont partagés entre le composant parent et le composant enfant. Si tu as d'autres questions, n'hésite pas à demander.

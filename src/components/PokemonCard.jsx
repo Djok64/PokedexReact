@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function PokemonCard({pokemon}) {
+const  PokemonCard = ({pokemon}) => {
     console.log(pokemon);
     // const pokemon = props.pokemon//prend le premier pokemon de pokemonList//
      return (// ce que j'avai penser ( pokemon.imgSrc === null )? <p>???</p>:(        la realité en dessous ....
