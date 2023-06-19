@@ -1,22 +1,26 @@
-import React from 'react';
+import React from "react";
 
+const Navbar = ({ setPokemonIndex, pokemonList }) => {
+  const handleClick = (index) => {
+    console.log("Le bouton a été cliqué !", index);
+    setPokemonIndex(index);
+  };
 
-const Navbar =({setPokemonIndex, pokemonIndex, pokemonList}) => {
-
-    const previousClick = () => setPokemonIndex(pokemonIndex - 1 );
-    const nextClick = () => setPokemonIndex(pokemonIndex + 1);
-
-    return ( 
-
-        <div>
-    {pokemonIndex > 0 ? (
-        <input type="button" value="Précédent" onClick={previousClick}/>
-         ): null }
-         {pokemonIndex < pokemonList.length - 1 ? (
-        <input type="button" value="Suivant" onClick={nextClick}/> 
-         ) : null } 
-         </div>
-         );
+  return (
+    <nav>
+      <ul>
+        {pokemonList.map((pokemon) => (
+          <div key={pokemon.id}>
+            <input
+              type="button"
+              value={pokemon.name}
+              onClick={() => handleClick(pokemon.id)}
+            />
+          </div>
+        ))}
+      </ul>
+    </nav>
+  );
 };
 
-export default Navbar ;
+export default Navbar;
